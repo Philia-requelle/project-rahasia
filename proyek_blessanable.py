@@ -84,16 +84,12 @@ def pesan_tiket():
   # Call the input_nama() function and store its return value in a variable
   nama = input_nama()
 
-  # Create a new instance of the Film class with the user's name
   pesan = Film(nama, film.judul, film.genre, film.durasi, film.jadwal, film.harga_tiket, jumlah_tiket)
 
-  # Convert the object to a string
   pesan_str = str(pesan)
 
-  # Create a new directory named after the value of the name attribute inside the "User Data_Catatan film" directory
   os.makedirs(os.path.join('User Data_Catatan film', nama), exist_ok=True)
 
-  # Open a file in write mode in the new directory
   with open(os.path.join('User Data_Catatan film', nama, f'{nama}.txt'), 'w') as f:
       # Write the string representation of the object to the file
       f.write(pesan_str)

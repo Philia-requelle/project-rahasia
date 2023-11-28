@@ -91,7 +91,6 @@ def pesan_tiket():
   os.makedirs(os.path.join('User Data_Catatan film', nama), exist_ok=True)
 
   with open(os.path.join('User Data_Catatan film', nama, f'{nama}.txt'), 'w') as f:
-      # Write the string representation of the object to the file
       f.write(pesan_str)
       input("Tekan Enter untuk menyelesaikan pemesanan...")
 
